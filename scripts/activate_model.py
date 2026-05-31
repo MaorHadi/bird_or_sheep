@@ -27,7 +27,7 @@ def predict_image(image_path):
     print()
 
 test_images = [
-    "bird_test.jpg"
+    "test_images/birdy.jpg"
     ]
 
 for img_path in test_images:
