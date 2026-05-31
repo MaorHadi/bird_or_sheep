@@ -1,34 +1,29 @@
-# arabOrJew_machineLearning
-to activate:
+# Bird_or_ship
 
-(inside bash) => chmod +x setup.sh
+## Setup & Usage
+Run the following commands in order:
 
-(inside bash) => ./setup.sh
+```bash
+chmod +x setup.sh
+./setup.sh
+py scripts/bird_or_sheep.py   # trains and saves the model
+py scripts/activate_model.py  # loads the model and classifies the target image 
+```
 
-(inside bash) => py scripts/bird_or_sheep.py - this should create the model.
+> To change the image being classified, update the path at the end of `activate_model.py`.
 
-(inside bash) => py scripts/activate_model
-//the activate model file will take the created model and the image specified at the end of the file, examine the model and release an output
+## Dataset Structure
+```
+dataset/
+├── bird/
+│   ├── bird_image_1.jpg
+│   └── ...
+└── sheep/
+    ├── sheep_image_1.jpg
+    └── ...
+```
 
-
-dataset example:
-
-dataset
---bird
-----bird_image_1.jpg
-----bird_image_2.jpg
-----bird_image_3.jpg
-----birdy_blalalala.jpg
-----bird_image_5.jpg
-----bird_image_67.jpg
---sheep
-----sheep_image_1.jpg
-----sheep_image_2.jpg
-----sheep_image_3.jpg
-----sheepy_blalalala.jpg
-----sheep_image_5.jpg
-----sheep_image_67.jpg
-
-
-correct output example:
+## Expected Output
+```
 This image is most likely a X with Y% confidence.
+```
